@@ -1,10 +1,7 @@
 version: 1
-from: "nfra/kickstart-flavor-php:7.4"
+from: "nfra/kickstart-flavor-php:unstable"
 
-apache_document_root: "/opt/www"
-apache_vhost_config: |
-    FallbackResource /index.php
-    php_admin_value file_uploads 0
+packages: ["php8.0-curl", "php8.0-http", "php8.0-raphf", "php8.0-xml"]
 
 config_file:
   template: "config.php.dist"
